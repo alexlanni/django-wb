@@ -1,0 +1,11 @@
+Ciao!
+
+{% if ultime_domande %}
+    <ul>
+    {% for domanda in ultime_domande %}
+        <li><a href="/polls/domanda/{{ domanda.id }}">{{ domanda.testo_domanda }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Nessuna domanda.</p>
+{% endif %}
